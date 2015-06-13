@@ -1,0 +1,270 @@
+<html lang="nl">
+<head>
+  <title>InfoWeb</title>
+  <link rel="stylesheet" href="styles/XP/stylesheet.css" type="text/css" />
+  <script src="js/boxover.js" type="text/javascript"></script>
+  <script src="js/ajax.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  var mouse_location_event = null;
+  var timer_hover_id = null;
+
+  function handleMouseMove(event) {
+      event = event || window.event; // IE-ism
+      mouse_location_event = event;
+  }
+  
+  document.onmousemove = handleMouseMove;
+
+</script>
+</head>
+<body>
+<table id="root" style="width: 1000px;">
+  <tr>
+    <td id="header" colspan="2">
+      &nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" id="tweedebalk">
+Laatste update rooster is van: Fri, 05 Jun 2015 09:11:41    </td>
+  </tr>
+  <tr>
+    <td id="menu">
+      <img src="styles/XP//images/menuboven.gif" ismap="ismap" style="border: none; margin-bottom: 100px;" usemap="#IHIP_NEW" alt="" />
+<map name="IHIP_NEW" id="IHIP_NEW">
+<area shape="rect" coords="35,5,56,26" alt="home"  href="index.php" />
+<area shape="default" alt="" nohref="nohref" />
+</map>
+
+<div onclick="document.location='index.php?ref=2';" class="knop" onmouseover="this.style.backgroundImage='url(styles/XP/images/knop_d.gif)';" onmouseout="this.style.backgroundImage='url(styles/XP/images/knop.gif)';"  ><span>leerlingroosters</span></div><div onclick="document.location='index.php?ref=3';" class="knop" onmouseover="this.style.backgroundImage='url(styles/XP/images/knop_d.gif)';" onmouseout="this.style.backgroundImage='url(styles/XP/images/knop.gif)';"  ><span>docentenroosters</span></div><div onclick="document.location='index.php?ref=4';" class="knop" onmouseover="this.style.backgroundImage='url(styles/XP/images/knop_d.gif)';" onmouseout="this.style.backgroundImage='url(styles/XP/images/knop.gif)';"  ><span>lokalenroosters</span></div><div onclick="document.location='index.php?ref=5';" class="knop" onmouseover="this.style.backgroundImage='url(styles/XP/images/knop_d.gif)';" onmouseout="this.style.backgroundImage='url(styles/XP/images/knop.gif)';"  ><span>klasroosters</span></div>    </td>
+    <td id="content">
+      <h1>Leerlingenroosters</h1><form style="padding: 0px; margin: 0px;" action="/H2/infoweb_H2/infoweb/index.php?id=1001727&ref=2" method="post">
+<input type="hidden" name="csrf" value="fa7ccd826533646db988311c600b0457" />
+<table>
+  <tr>
+    <td> Toon week:</td>
+    <td>
+      <div id="divweek"> <select id="select_week"name="weeknummer" onchange="weekGeselecteerd(this.value, 0, '', '');  document.getElementById('select_element').style.display = 'none'; document.getElementById('select_element_error').style.display = 'none';">
+<option disabled="disabled"  value="31">31 28/07/14 - 02/08/14</option>
+<option disabled="disabled"  value="32">32 04/08/14 - 09/08/14</option>
+<option disabled="disabled"  value="33">33 11/08/14 - 16/08/14</option>
+<option value="34">34 18/08/14 - 23/08/14</option>
+<option value="35">35 25/08/14 - 30/08/14</option>
+<option value="36">36 01/09/14 - 06/09/14</option>
+<option value="37">37 08/09/14 - 13/09/14</option>
+<option value="38">38 15/09/14 - 20/09/14</option>
+<option value="39">39 22/09/14 - 27/09/14</option>
+<option value="40">40 29/09/14 - 04/10/14</option>
+<option value="41">41 06/10/14 - 11/10/14</option>
+<option disabled="disabled"  value="42">42 13/10/14 - 18/10/14</option>
+<option value="43">43 20/10/14 - 25/10/14</option>
+<option value="44">44 27/10/14 - 31/10/14</option>
+<option value="45">45 03/11/14 - 07/11/14</option>
+<option value="46">46 10/11/14 - 14/11/14</option>
+<option value="47">47 17/11/14 - 21/11/14</option>
+<option value="48">48 24/11/14 - 28/11/14</option>
+<option value="49">49 01/12/14 - 05/12/14</option>
+<option value="50">50 08/12/14 - 12/12/14</option>
+<option value="51">51 15/12/14 - 19/12/14</option>
+<option disabled="disabled"  value="52">52 22/12/14 - 26/12/14</option>
+<option disabled="disabled"  value="1">1 29/12/14 - 02/01/15</option>
+<option value="2">2 05/01/15 - 09/01/15</option>
+<option value="3">3 12/01/15 - 16/01/15</option>
+<option value="4">4 19/01/15 - 23/01/15</option>
+<option value="5">5 26/01/15 - 30/01/15</option>
+<option value="6">6 02/02/15 - 06/02/15</option>
+<option value="7">7 09/02/15 - 13/02/15</option>
+<option value="8">8 16/02/15 - 20/02/15</option>
+<option disabled="disabled"  value="9">9 23/02/15 - 27/02/15</option>
+<option value="10">10 02/03/15 - 06/03/15</option>
+<option value="11">11 09/03/15 - 13/03/15</option>
+<option value="12">12 16/03/15 - 20/03/15</option>
+<option value="13">13 23/03/15 - 27/03/15</option>
+<option value="14">14 30/03/15 - 04/04/15</option>
+<option value="15">15 06/04/15 - 11/04/15</option>
+<option value="16">16 13/04/15 - 18/04/15</option>
+<option value="17">17 20/04/15 - 25/04/15</option>
+<option value="18">18 27/04/15 - 02/05/15</option>
+<option disabled="disabled"  value="19">19 04/05/15 - 09/05/15</option>
+<option value="20">20 11/05/15 - 16/05/15</option>
+<option value="21">21 18/05/15 - 23/05/15</option>
+<option value="22">22 25/05/15 - 30/05/15</option>
+<option value="23">23 01/06/15 - 06/06/15</option>
+<option selected="selected" value="24">24 08/06/15 - 13/06/15</option>
+<option value="25">25 15/06/15 - 20/06/15</option>
+<option value="26">26 22/06/15 - 27/06/15</option>
+<option value="27">27 29/06/15 - 04/07/15</option>
+<option disabled="disabled"  value="28">28 06/07/15 - 11/07/15</option>
+<option disabled="disabled"  value="29">29 13/07/15 - 18/07/15</option>
+<option disabled="disabled"  value="30">30 20/07/15 - 25/07/15</option>
+</select>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>Kies een leerling:</td>
+    <td>
+    <div style="float: left;" id="divgroep">
+<select id="select_groep" name="groep" onchange="groepGeselecteerd(document.getElementById('select_week').value, this.value, 0); document.getElementById('select_element').style.display = 'block';
+                document.getElementById('select_element_error').style.display = 'block';">
+<option value="-1">Toon: </option>
+<option value="%23uit">#uit</option>
+<option value="B1BK1">B1BK1</option>
+<option value="B1BK2">B1BK2</option>
+<option value="B1BK3">B1BK3</option>
+<option value="B1BK4">B1BK4</option>
+<option value="B1BK5">B1BK5</option>
+<option value="B2BK1">B2BK1</option>
+<option value="B2BK2">B2BK2</option>
+<option value="B2BK3">B2BK3</option>
+<option value="B2BK4">B2BK4</option>
+<option value="B3BB1">B3BB1</option>
+<option value="B3BB2">B3BB2</option>
+<option value="B3BB3">B3BB3</option>
+<option value="B3KB1">B3KB1</option>
+<option value="B3KB2">B3KB2</option>
+<option value="B3KB3">B3KB3</option>
+<option value="B4BB1">B4BB1</option>
+<option value="B4BB2">B4BB2</option>
+<option value="B4BB3">B4BB3</option>
+<option value="B4KB1">B4KB1</option>
+<option value="B4KB2">B4KB2</option>
+<option value="B4KB3">B4KB3</option>
+<option value="B4KB4">B4KB4</option>
+<option value="B2H1">B2H1</option>
+<option value="B2H2">B2H2</option>
+<option value="B2H3">B2H3</option>
+<option value="B2TH1">B2TH1</option>
+<option value="B2TH2">B2TH2</option>
+<option value="B3H1">B3H1</option>
+<option value="B3H2">B3H2</option>
+<option value="B3H3">B3H3</option>
+<option value="B3TH1">B3TH1</option>
+<option value="B4H1">B4H1</option>
+<option value="B4H2">B4H2</option>
+<option value="B4H3">B4H3</option>
+<option value="B4H4">B4H4</option>
+<option value="B4H5">B4H5</option>
+<option value="B4H6">B4H6</option>
+<option value="B5H1">B5H1</option>
+<option value="B5H2">B5H2</option>
+<option value="B5H3">B5H3</option>
+<option value="B5H4">B5H4</option>
+<option value="B5H5">B5H5</option>
+<option value="B2TV1">B2TV1</option>
+<option value="B2AT1">B2AT1</option>
+<option value="B2AT2">B2AT2</option>
+<option value="B2GY1">B2GY1</option>
+<option value="B3TV1">B3TV1</option>
+<option value="B3AT1">B3AT1</option>
+<option value="B3AT2">B3AT2</option>
+<option value="B3AT3">B3AT3</option>
+<option value="B3GY1">B3GY1</option>
+<option value="B4VW1">B4VW1</option>
+<option value="B4VW2">B4VW2</option>
+<option value="B4VW3">B4VW3</option>
+<option value="B5VW1">B5VW1</option>
+<option value="B5VW2">B5VW2</option>
+<option value="B6VW1">B6VW1</option>
+<option value="B6VW2">B6VW2</option>
+<option value="B6VW3">B6VW3</option>
+</select>
+</div>
+<div style="float: left;" id="divelement">
+</div> &nbsp;
+    </td>
+  </tr>
+</table>
+</form>
+<form style="padding: 0px; margin: 0px;" action="/H2/infoweb_H2/infoweb/index.php?id=1001727&ref=2" method="post">
+<input type="hidden" name="csrf" value="fa7ccd826533646db988311c600b0457" />
+<table>
+  <tr>
+    <td>of vul hier een leerlingnummer in:</td>
+    <td><input autocapitalize="off" autocorrect="off" type="text" value="" name="id" /></td>
+  </tr>
+</table>
+</form>
+<br />
+<br /><h2>Het rooster van week 24 voor 1001727</h2>
+<a href="#" onclick="window.open('print.php?&week=24&amp;naam=1001727&amp;id=1001727&amp;type=0', 'printer', 'toolbar=no, statusbar=no, scrollbars=yes, resizable=yes, top=10, left=10, width=700, height=800')">Afdrukken</a><br />
+<a href="export.php?ref=2&id=1001727&dag=1433761200">Digitale Agenda</a><br />
+<div id="rooster">
+
+<table class="roostercontainer">
+ <tr>
+  <td>
+<div id="hover_caller_id" style="display: none; position: absolute; top: 0px; left: 0px; width: 0px; z-index: 100;"></div>
+<div id="hoverinfo" style="display: none; padding: 10px; padding-left: 20px; position: absolute; top: 0px; left: 0px; width: 200px; border: solid 1px black; background-color: white;"  onclick="hideHoverInfo();" onmousemove="checkAndHideHoverInfo();" onmouseleave="hideHoverInfo();"><div id="hovercontent"></div><div id="hovercloser" style="position: absolute; top: 0px; right: 0px; width: 20px; height: 20px; cursor: pointer; cursor: hand;">X</div></div>   <table class="roosterdeel">
+ <tr><th class="first">&nbsp;</th><th class="top oneven">ma</th><th class="top even">di</th><th class="top oneven">wo</th><th class="top even">do</th><th class="top oneven">vr</th></tr>
+ <tr class="oneven">
+    <th class="left">u1</th>
+    <td><table id="les08:15,09:15,u1ma,ma" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=VRIT'>VRIT</a><br />LO<br /><a href='index.php?ref=4&id=SCHUT2'>SCHUT2</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les08:15,09:15,u1di,di" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=KOOP'>KOOP</a><br />NE<br /><a href='index.php?ref=4&id=B212'>B212</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td class="vrij">  &nbsp; </td>
+    <td class="vrij">  &nbsp; </td>
+    <td><table id="les08:15,09:15,u1vr,vr" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=BEEJ'>BEEJ</a><br />NS<br /><a href='index.php?ref=4&id=B320'>B320</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+ </tr>
+ <tr class="even">
+    <th class="left">u2</th>
+    <td><table id="les09:15,10:15,u2ma,ma" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=DEKD'>DEKD</a><br />GR<br /><a href='index.php?ref=4&id=B315'>B315</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les09:15,10:15,u2di,di" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=MILY'>MILY</a><br />GS<br /><a href='index.php?ref=4&id=B208'>B208</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les09:15,10:15,u2wo,wo" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=DENE'>DENE</a><br />WI<br /><a href='index.php?ref=4&id=B203'>B203</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les09:15,10:15,u2do,do" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=BUMM'>BUMM</a><br />MTL<br /><a href='index.php?ref=4&id=B118'>B118</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les09:15,10:15,u2vr,vr" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=KOOP'>KOOP</a><br />NE<br /><a href='index.php?ref=4&id=B212'>B212</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+ </tr>
+ <tr class="oneven">
+    <th class="left">u3</th>
+    <td><table id="les10:35,11:35,u3ma,ma" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=YBEK'>YBEK</a><br />AK<br /><a href='index.php?ref=4&id=B216'>B216</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les10:35,11:35,u3di,di" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=WAJA'>WAJA</a><br />EN<br /><a href='index.php?ref=4&id=B315'>B315</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les10:35,11:35,u3wo,wo" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=ROEM'>ROEM</a><br />FA<br /><a href='index.php?ref=4&id=B309'>B309</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les10:35,11:35,u3do,do" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=BUMM'>BUMM</a><br />LA<br /><a href='index.php?ref=4&id=B307'>B307</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les10:35,11:35,u3vr,vr" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=ROEM'>ROEM</a><br />FA<br /><a href='index.php?ref=4&id=B312'>B312</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+ </tr>
+ <tr class="even">
+    <th class="left">u4</th>
+    <td><table id="les11:35,12:35,u4ma,ma" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=WIJH'>WIJH</a><br />BI<br /><a href='index.php?ref=4&id=B219'>B219</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les11:35,12:35,u4di,di" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=VRIT'>VRIT</a><br />LO<br /><a href='index.php?ref=4&id=SCHUT3'>SCHUT3</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les11:35,12:35,u4wo,wo" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=VIJJ'>VIJJ</a><br />KV<br /><a href='index.php?ref=4&id=B158'>B158</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les11:35,12:35,u4do,do" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=KOOP'>KOOP</a><br />NE<br /><a href='index.php?ref=4&id=B212'>B212</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les11:35,12:35,u4vr,vr" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=GOEE'>GOEE</a><br />DU<br /><a href='index.php?ref=4&id=B313'>B313</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+ </tr>
+ <tr class="oneven">
+    <th class="left">u5</th>
+    <td><table id="les13:05,14:05,u5ma,ma" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=BUMM'>BUMM</a><br />LA<br /><a href='index.php?ref=4&id=B315'>B315</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les13:05,14:05,u5di,di" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=DEKD'>DEKD</a><br />GR<br /><a href='index.php?ref=4&id=B313'>B313</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les13:05,14:05,u5wo,wo" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=BOIN'>BOIN</a><br />FI<br /><a href='index.php?ref=4&id=B315'>B315</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les13:05,14:05,u5do,do" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=BEEJ'>BEEJ</a><br />NS<br /><a href='index.php?ref=4&id=B320'>B320</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td><table id="les13:05,14:05,u5vr,vr" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=DENE'>DENE</a><br />WI<br /><a href='index.php?ref=4&id=B203'>B203</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+ </tr>
+ <tr class="even">
+    <th class="left">u6</th>
+    <td><table id="les14:05,15:05,u6ma,ma" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=DENE'>DENE</a><br />WI<br /><a href='index.php?ref=4&id=B203'>B203</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td class="vrij">  &nbsp; </td>
+    <td class="vrij">  &nbsp; </td>
+    <td><table id="les14:05,15:05,u6do,do" class="container" ><tr><td rowspan="3"><span class="nobr"><a href='index.php?ref=3&id=WAJA'>WAJA</a><br />EN<br /><a href='index.php?ref=4&id=B308'>B308</a></span></td><td class="pic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr><tr><td class="pic">&nbsp;</td></tr></table> </td>
+    <td class="vrij">  &nbsp; </td>
+ </tr>
+ <tr class="oneven">
+    <th class="left">u7</th>
+    <td class="vrij">  &nbsp; </td>
+    <td class="vrij">  &nbsp; </td>
+    <td class="vrij">  &nbsp; </td>
+    <td class="vrij">  &nbsp; </td>
+    <td class="vrij">  &nbsp; </td>
+ </tr>
+ </table> </td> </tr> </table>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td id="linkerfooter">
+      &nbsp;
+    </td>
+    <td id="footer" style="padding-top: 10px;">
+      &nbsp; versie 2.4.4 - &#169; 2014 &nbsp; <A href="http://www.zermelo.nl">Zermelo Roostermakers</a>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
